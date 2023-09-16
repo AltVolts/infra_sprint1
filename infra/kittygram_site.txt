@@ -1,0 +1,5 @@
+IP: 130.193.54.68;
+name_taski: https://gachislav.ddns.net/;
+name_kittygram: https://koptty.ddns.net/;
+login: Admin;
+password: qwaszx; 
