@@ -21,23 +21,23 @@ server {
     }
 
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/gachislav.ddns.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/gachislav.ddns.net/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/gachislav.ddns.net/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gachislav.ddns.net/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
 }
 server {
     if ($host = gachislav.ddns.net) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    }
 
 
 
     listen 80;
     server_name 130.193.54.68 gachislav.ddns.net;
-    return 404; # managed by Certbot
+    return 404;
 
 
 }
@@ -68,11 +68,11 @@ server {
 }
 
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/koptty.ddns.net/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/koptty.ddns.net/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/koptty.ddns.net/fullchain.pem; 
+    ssl_certificate_key /etc/letsencrypt/live/koptty.ddns.net/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
 }
 
@@ -81,12 +81,12 @@ server {
 server {
     if ($host = koptty.ddns.net) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    }
 
 
     server_name 130.193.54.68  koptty.ddns.net;
     listen 80;
-    return 404; # managed by Certbot
+    return 404;
 
 
 }
